@@ -1,8 +1,175 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Definisanje profesionalnih boja pomoću CSS promenljivih */
+:root {
+  --primary-color: #2980b9; /* Plava (pouzdanost i stabilnost) */
+  --secondary-color: #34495e; /* Siva (neutralna, ozbiljna) */
+  --highlight-color: #e74c3c; /* Akcent (crvena za akcente) */
+  --background-color: #ecf0f1; /* Svetla pozadina za čistoću */
+  --text-color: #2c3e50; /* Tamna boja teksta za kontrast */
+  --footer-background: #34495e; /* Siva pozadina za footer */
+  --button-hover: #1abc9c; /* Akcenat za hover efekte (zelena boja za akcije) */
+}
+
+/* Globalni stilovi */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Tipografija */
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/* Stilizacija za header */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 20px 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  font-size: 1.1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--highlight-color);
+  text-decoration: underline;
+}
+
+/* Stilizacija za footer */
+footer {
+  background-color: var(--footer-background);
+  color: white;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: var(--highlight-color);
+}
+
+/* Stilizacija za projekat */
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 320px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+  color: var(--highlight-color);
+}
+
+/* Responzivni dizajn */
 @media (max-width: 768px) {
-    nav ul {
-      flex-direction: column;
-      gap: 10px;
-    }
+  header {
+    padding: 15px 20px;
   }
-  
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+}
+
+section {
+  padding: 50px;
+  margin: 30px 0;
+}
+
+#home {
+  background-color: #f1f1f1;
+}
+
+#about {
+  background-color: #eaeaea;
+}
+
+#tools {
+  background-color: #dcdcdc;
+}
+
+body {
+  margin-top: 80px;
+}
