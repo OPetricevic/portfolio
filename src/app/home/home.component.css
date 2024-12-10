@@ -1,64 +1,83 @@
-section {
-  text-align: center;
+/* Stilovi za sekciju "Dobrodošli" */
+.welcome-container {
+  background-color: #34495e; /* Tamnoplava pozadina za dosljednost */
+  color: white;
   padding: 50px;
-  background-color: white;
-  margin-bottom: 40px; /* Razmak ispod sekcije */
+  text-align: center;
+  margin-bottom: 40px;
+  border-radius: 10px;
 }
 
-.projects-container {
+.welcome-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.welcome-container .intro-text {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.welcome-footer h3 {
+  color: #e67e22; /* Naglasak za naslov sekcije */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Kartice projekata */
+.project-cards {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
   justify-content: center;
-  margin: 30px auto; /* Vertikalni razmak iznad i ispod projekata */
-  max-width: 1200px; /* Sprečava preširoke redove na velikim ekranima */
-  flex-wrap: wrap; /* Projekti se prelome u novi red na manjim ekranima */
+  gap: 20px;
 }
 
 .project-card {
-  border: 1px solid #ddd;
+  display: flex;
+  align-items: center; /* Vertikalno centriranje slike i teksta */
+  background-color: #2c3e50; /* Tamnoplava pozadina (ista kao experience-card) */
+  border: 1px solid #1a252f; /* Obrub identičan experience-card */
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
-  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  color: white; /* Tekst u bijeloj boji */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Blaga sjenka */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  background-color: #fff; /* Dodaje kontrast na svetloj pozadini */
+  text-align: left; /* Poravnanje teksta na lijevu stranu */
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sjenka na hover */
 }
 
-.project-card h3 {
-  margin-bottom: 10px;
+.project-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Okrugle slike */
+  object-fit: cover;
+  margin-right: 15px; /* Razmak između slike i teksta */
+}
+
+.project-details h4 {
   font-size: 1.2rem;
-  color: #2c3e50;
+  margin-bottom: 5px;
+  color: #ffffff; /* Bijeli naslov */
 }
 
-.project-card p {
+.project-details p {
   font-size: 0.9rem;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  color: #b0bec5; /* Sivi opis */
 }
 
-.project-card a {
+.project-details a {
   text-decoration: none;
   color: #3498db;
   font-weight: bold;
 }
 
-.project-card a:hover {
+.project-details a:hover {
   text-decoration: underline;
-}
-
-/* Stilovi za naslov */
-h1, h2 {
-  margin-bottom: 30px;
-  font-size: 2rem;
-  color: #2c3e50;
-}
-
-/* Dodatni razmak između projekata i footera */
-.projects-container {
-  margin-bottom: 60px; /* Dodatni prostor pre footera */
 }
