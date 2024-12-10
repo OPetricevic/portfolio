@@ -2,13 +2,16 @@ section {
   text-align: center;
   padding: 50px;
   background-color: white;
+  margin-bottom: 40px; /* Razmak ispod sekcije */
 }
 
 .projects-container {
   display: flex;
   gap: 20px;
   justify-content: center;
-  margin-top: 30px;
+  margin: 30px auto; /* Vertikalni razmak iznad i ispod projekata */
+  max-width: 1200px; /* Sprečava preširoke redove na velikim ekranima */
+  flex-wrap: wrap; /* Projekti se prelome u novi red na manjim ekranima */
 }
 
 .project-card {
@@ -19,6 +22,7 @@ section {
   max-width: 300px;
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: #fff; /* Dodaje kontrast na svetloj pozadini */
 }
 
 .project-card:hover {
@@ -47,8 +51,14 @@ section {
   text-decoration: underline;
 }
 
-h1 {
+/* Stilovi za naslov */
+h1, h2 {
   margin-bottom: 30px;
   font-size: 2rem;
   color: #2c3e50;
+}
+
+/* Dodatni razmak između projekata i footera */
+.projects-container {
+  margin-bottom: 60px; /* Dodatni prostor pre footera */
 }

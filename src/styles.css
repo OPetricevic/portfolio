@@ -1,7 +1,8 @@
 /* General body styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #34495e; /* Tamnoplava pozadina za celu stranicu */
+  color: white; /* Svetli tekst */
   margin: 0;
   padding: 0;
   height: 100%; /* Zauzimanje celokupne visine */
@@ -123,3 +124,5 @@ footer {
     margin-bottom: 20px;
   }
 }
+
+

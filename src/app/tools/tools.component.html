@@ -1,14 +1,29 @@
-<section>
-  <h2>Tools I Use</h2>
-  <p>Here are the tools I use for development:</p>
-  <ul>
-    <li>Angular</li>
-    <li>TypeScript</li>
-    <li>Git</li>
-    <li>Golang</li>
-    <li>Java</li>
-    <li>Swift</li>
-    <li>Java</li>
-    <li>React</li>
-  </ul>
-</section>
+<div class="tools-container">
+  <div
+    class="tool-card"
+    *ngFor="let tool of tools"
+    (click)="onToolClick(tool)"
+    [ngClass]="{ 'active-tool': selectedTool?.title === tool.title }"
+  >
+    <img [src]="tool.imageUrl" [alt]="tool.title" />
+    <h3>{{ tool.title }}</h3>
+    <p>{{ tool.description }}</p>
+    <p><strong>Cijena:</strong> {{ tool.price }} EUR/sat</p>
+  </div>
+</div>
+
+<div *ngIf="selectedTool" class="tool-details">
+  <button (click)="clearSelection()">Nazad</button>
+  <h2>Detalji za alat: {{ selectedTool.title }}</h2>
+  <p>{{ selectedTool.description }}</p>
+  <p>
+    <strong>Kategorija:</strong>
+    {{ selectedTool.type === 'frontend' ? 'Frontend alat' : 'Backend alat' }}
+  </p>
+  <p>
+    {{ selectedTool.type === 'frontend'
+      ? 'Frontend alat koristi se za kreiranje interaktivnih korisničkih sučelja i web stranica.'
+      : 'Backend alat koristi se za kreiranje serverske logike, API-ja i upravljanje bazama podataka.' }}
+  </p>
+  <p><strong>Cijena po satu:</strong> {{ selectedTool.price }} EUR</p>
+</div>
