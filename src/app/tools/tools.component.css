@@ -27,8 +27,11 @@
 .tool-card img {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
-    margin-bottom: 15px; /* Razmak ispod slike */
+    background-color: white; /* Pozadina slike */
+    border-radius: 50%; /* Okrugle slike */
+    padding: 10px; /* Razmak između slike i ivice pozadine */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Blaga sjenka */
+    object-fit: contain; /* Osigurava da se slika lepo uklopi unutar kruga */
 }
 
 .tool-card h3 {
@@ -74,12 +77,6 @@
 }
 
 .active-tool {
-    border-color: #bc1f1a; /* Naglašena zelena za aktivnu karticu */
+    border-color: #bc1f1a; /* Naglašena crvena za aktivnu karticu */
     box-shadow: 0 8px 15px rgba(255, 17, 0, 0.5);
-}
-
-.tool-card img {
-    background-color: white; /* Dodaje belu pozadinu */
-    border-radius: 50%; /* Zadržava kružni efekat */
-    padding: 10px; /* Mali razmak između slike i ivice pozadine */
 }

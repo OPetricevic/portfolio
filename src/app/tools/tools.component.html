@@ -8,22 +8,18 @@
     <img [src]="tool.imageUrl" [alt]="tool.title" />
     <h3>{{ tool.title }}</h3>
     <p>{{ tool.description }}</p>
-    <p><strong>Cijena:</strong> {{ tool.price }} EUR/sat</p>
+    <p><strong>Cijena:</strong> {{ tool.price }}</p>
   </div>
 </div>
 
 <div *ngIf="selectedTool" class="tool-details">
   <button (click)="clearSelection()">Nazad</button>
   <h2>Detalji za alat: {{ selectedTool.title }}</h2>
-  <p>{{ selectedTool.description }}</p>
-  <p>
-    <strong>Kategorija:</strong>
-    {{ selectedTool.type === 'frontend' ? 'Frontend alat' : 'Backend alat' }}
+  <p>{{ selectedTool.details }}</p>
+  <p *ngIf="selectedTool.category">
+    <strong>Kategorija:</strong> {{ selectedTool.category }}
   </p>
   <p>
-    {{ selectedTool.type === 'frontend'
-      ? 'Frontend alat koristi se za kreiranje interaktivnih korisničkih sučelja i web stranica.'
-      : 'Backend alat koristi se za kreiranje serverske logike, API-ja i upravljanje bazama podataka.' }}
+    <strong>Cijena po satu:</strong> {{ selectedTool.price }}
   </p>
-  <p><strong>Cijena po satu:</strong> {{ selectedTool.price }} EUR</p>
 </div>
